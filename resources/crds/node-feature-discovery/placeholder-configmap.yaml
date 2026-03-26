@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nfd-placeholder
+  namespace: default
+data:
+  test: "true"

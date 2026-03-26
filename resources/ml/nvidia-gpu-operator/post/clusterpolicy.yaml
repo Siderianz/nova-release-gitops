@@ -1,0 +1,14 @@
+apiVersion: nvidia.com/v1
+kind: ClusterPolicy
+metadata:
+  name: nvidia-cluster-policy
+spec:
+  mig:
+    strategy: none
+  migManager:
+    enabled: false
+    config:
+      name: default-mig-parted-config
+  devicePlugin:
+    config:
+      name: default-device-plugin-config

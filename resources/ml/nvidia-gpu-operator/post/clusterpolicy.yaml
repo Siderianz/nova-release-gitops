@@ -3,12 +3,40 @@ kind: ClusterPolicy
 metadata:
   name: nvidia-cluster-policy
 spec:
-  mig:
-    strategy: none
+  operator:
+    defaultRuntime: containerd
+
+  daemonsets:
+    rollingUpdate:
+      maxUnavailable: "1"
+
+  driver:
+    enabled: true
+
+  toolkit:
+    enabled: true
+
+  devicePlugin:
+    enabled: true
+    config:
+      name: default
+
+  dcgm:
+    enabled: true
+
+  dcgmExporter:
+    enabled: true
+
+  gfd:
+    enabled: true
+
+  nodeStatusExporter:
+    enabled: true
+
   migManager:
     enabled: false
     config:
       name: default-mig-parted-config
-  devicePlugin:
-    config:
-      name: default-device-plugin-config
+
+  mig:
+    strategy: none

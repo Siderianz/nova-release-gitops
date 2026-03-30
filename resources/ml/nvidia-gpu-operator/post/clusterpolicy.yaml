@@ -19,7 +19,7 @@ spec:
   devicePlugin:
     enabled: true
     config:
-      name: default
+      name: default-device-plugin-config
 
   dcgm:
     enabled: true

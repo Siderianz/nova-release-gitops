@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: ngo-crds-placeholder
-  namespace: default
-data:
-  test: "true"
